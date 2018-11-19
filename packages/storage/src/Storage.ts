@@ -88,7 +88,7 @@ export default class StorageClass {
         if (!credentialsOK) { return Promise.reject('No credentials'); }
 
         const opt = Object.assign({}, this._options, options);
-        const { bucket, region, credentials, level, download, track, expires } = opt;
+        const { bucket, region, credentials, level, download, track, ResponseContentDisposition, expires } = opt;
 
         const prefix = this._prefix(opt);
         const final_key = prefix + key;
